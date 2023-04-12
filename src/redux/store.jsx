@@ -5,8 +5,8 @@
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
 import { configureStore } from '@reduxjs/toolkit';
-import BookSlice from './books/BookSlice';
-import CategoriesSlice from './categories/CategoriesSlice';
+import BookSlice from './books/bookslice';
+import CategoriesSlice from './categories/categoriesslice';
 
 const store = configureStore({
   reducer: {

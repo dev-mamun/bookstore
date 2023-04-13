@@ -3,6 +3,22 @@ body {
   font-size: 15px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 80px;
+}
+
 form {
   display: flex;
   gap: 40px;

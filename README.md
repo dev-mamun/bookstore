@@ -19,6 +19,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Available Scripts](#available-scripts)
+- [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
@@ -156,6 +157,15 @@ In the project directory, you can run:
 - `npm test` - _To launch the test runner in the interactive watch mode._
 - `npm run buid` - _To build the app for production to the build folder.Learn more at [deployment](https://create-react-app.dev/docs/deployment/)_
 - `npm run eject` - _To remove the single build dependency from your project. **Note this is a one-way operation. Once you eject, you can't go back!**_
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverseinc organization for designing the project
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 

@@ -23,7 +23,7 @@ function AddBook() {
     e.preventDefault();
     if (bookName.trim() && author.trim()) {
       dispatch(addBook({
-        item_id: `item${books.length + 1}`,
+        id: `${books.length + 1}`,
         title: bookName,
         author,
         category: 'Nonfiction',

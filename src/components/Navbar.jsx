@@ -1,3 +1,9 @@
+/** ****************************************
+ * Project: bookstore
+ * File: Navbar.jsx
+ * Created: 4/12/23
+ * Author: Abdullah Al Mamun <mamun1214@gmail.com>
+ ****************************************** */
 import { Link } from 'react-router-dom';
 
 const links = [
@@ -6,14 +12,9 @@ const links = [
 ];
 function NavBar() {
   return (
-    <nav style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
-      <h1 style={{ fontFamily: 'monospace', fontSize: '30px' }}>Mamun Book Store</h1>
-      <ul style={{
-        display: 'flex',
-        listStyleType: 'none',
-        gap: '80px',
-      }}
-      >
+    <nav>
+      <h1>Mamun Book Store</h1>
+      <ul>
         {links.map((link) => (
           <li key={link.text}>
             <Link to={link.path} style={{ textDecoration: 'none' }}>{link.text}</Link>

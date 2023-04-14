@@ -6,12 +6,16 @@
  ****************************************** */
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { removeBook } from '../../redux/books/bookslice';
+import { deleteBook, removeBook } from '../../redux/books/bookslice';
 
 function RemoveBtn({ bookId }) {
   const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(removeBook(bookId));
+    dispatch(deleteBook(bookId));
+  };
   return (
-    <button type="button" onClick={() => dispatch(removeBook(bookId))}>Remove</button>
+    <button type="button" onClick={handleClick}>Remove</button>
   );
 }
 

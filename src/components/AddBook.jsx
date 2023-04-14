@@ -4,12 +4,12 @@
  * Created: 4/12/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/bookslice';
+import { v4 as uuid } from 'uuid';
+import { addNewBook, addBook } from '../redux/books/bookslice';
 
 function AddBook() {
-  const { books } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [author, setAuthor] = useState('');
@@ -22,12 +22,14 @@ function AddBook() {
   const submitForm = (e) => {
     e.preventDefault();
     if (bookName.trim() && author.trim()) {
-      dispatch(addBook({
-        id: `${books.length + 1}`,
-        title: bookName,
+      const newBookDetails = {
         author,
-        category: 'Nonfiction',
-      }));
+        title: bookName,
+        category: 'Fiction',
+        item_id: uuid(),
+      };
+      dispatch(addBook(newBookDetails));
+      dispatch(addNewBook(newBookDetails));
       setAuthor('');
       setBookName('');
     }

@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { addNewBook, addBook } from '../redux/books/bookslice';
+import CSS from './Css/Addbook.module.css';
 
 function AddBook() {
   const dispatch = useDispatch();
@@ -35,11 +36,11 @@ function AddBook() {
     }
   };
   return (
-    <div>
-      <h2>Add book</h2>
-      <form onSubmit={submitForm}>
-        <input type="text" placeholder="add book name" value={bookName} onChange={handleBookName} required />
-        <input type="text" placeholder="add author of book" value={author} onChange={handleAuthor} required />
+    <div className={CSS.container}>
+      <h2 className={CSS.h2}>Add book</h2>
+      <form className={CSS.form} onSubmit={submitForm}>
+        <input type="text" placeholder="Book Title" value={bookName} onChange={handleBookName} required />
+        <input type="text" placeholder="Book Author" value={author} onChange={handleAuthor} required />
         <button type="submit">Add book</button>
       </form>
     </div>

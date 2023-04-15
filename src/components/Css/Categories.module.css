@@ -1,0 +1,13 @@
+/********************************************
+ * Project: bookstore
+ * File: Categories.css
+ * Created: 4/15/23
+ * Author: Abdullah Al Mamun <mamun1214@gmail.com>
+ ********************************************/
+.container {
+  padding: 4%;
+}
+
+.container h1 {
+  font-family: "Roboto Slab", serif;
+}

@@ -4,24 +4,32 @@
  * Created: 4/12/23
  * Author: Abdullah Al Mamun <mamun1214@gmail.com>
  ****************************************** */
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import CSS from './Css/Navbar.module.css';
 
 const links = [
-  { path: '/', text: 'Books' },
-  { path: 'categories', text: 'Categories' },
+  { path: '/', text: 'BOOKS' },
+  { path: 'categories', text: 'CATEGORIES' },
 ];
+
 function NavBar() {
   return (
-    <nav>
-      <h1>Mamun Book Store</h1>
-      <ul>
+    <nav className={CSS['nav-bar']}>
+      <h1 className={CSS['nav-brand']}>Mamun Book Store</h1>
+      <ul className={CSS['nav-links']}>
         {links.map((link) => (
           <li key={link.text}>
-            <Link to={link.path} style={{ textDecoration: 'none' }}>{link.text}</Link>
+            <NavLink to={link.path}>{link.text}</NavLink>
           </li>
         ))}
       </ul>
+      <button type="button" className={CSS['icon-button']}>
+        <FontAwesomeIcon icon={faUser} className={CSS['fa-user']} aria-label="user-icon" />
+      </button>
     </nav>
   );
 }
+
 export default NavBar;
